@@ -10,6 +10,8 @@ I hope someone finds this useful, enjoy!
 
 A generic Python tool that automatically converts OpenAPI 3.0 specifications into fully functional TypeScript MCP (Model Context Protocol) servers.
 
+Note: Only works with typescript MCP servers currently. Working on Python support.
+
 ## Overview
 
 This tool takes any OpenAPI specification and generates:
