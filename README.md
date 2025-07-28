@@ -1,3 +1,11 @@
+# Hello There
+
+While there are many MCP Server Generators (or rather, tool generators) out there today, I determined that most of them required too many manual steps from the user. With this MCP Server generator, you are actually only required to do the minimal setup of the initial mcp server base, using the NPX command, stick this script in the root directory, add in your OpenAPI spec and then run the script. 
+
+The ultimate goal of this is to make it fully automated, including using STDIO or SSE, selecting between authentication methods, and auto-magically improving the descriptions for the APIs based on the spec using a special description improvement agent.
+
+I hope someone finds this useful, enjoy!
+
 # OpenAPI to MCP Server Generator
 
 A generic Python tool that automatically converts OpenAPI 3.0 specifications into fully functional TypeScript MCP (Model Context Protocol) servers.
