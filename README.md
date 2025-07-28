@@ -21,7 +21,90 @@ This tool takes any OpenAPI specification and generates:
 - ✅ **Error Handling**: Comprehensive HTTP error handling
 - ✅ **Raw JSON Output**: Returns clean JSON responses
 
-## Requirements
+## Prerequisites
+
+Before using this tool, ensure you have the following installed and configured:
+
+### System Requirements
+
+- **Python 3.7+**: Required to run the OpenAPI to MCP generator script
+  - Check version: `python3 --version`
+  - Install from: [python.org](https://www.python.org/downloads/)
+
+- **Node.js 18+**: Required for TypeScript compilation and MCP server runtime
+  - Check version: `node --version`
+  - Install from: [nodejs.org](https://nodejs.org/) or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
+
+- **npm**: Comes with Node.js, used for package management
+  - Check version: `npm --version`
+
+### Development Tools
+
+- **TypeScript**: Required for compiling the generated MCP server
+  - Install globally: `npm install -g typescript`
+  - Check version: `tsc --version`
+
+- **MCP SDK**: The Model Context Protocol SDK for TypeScript
+  - Installed automatically when using the MCP server template
+  - Manual install: `npm install @modelcontextprotocol/sdk`
+
+### Additional Dependencies
+
+The generator creates servers that require these npm packages:
+
+- **axios**: For making HTTP requests to your API
+  - Install: `npm install axios`
+  - Used for all API communication in generated servers
+
+### Optional Tools
+
+- **Git**: For version control and cloning the MCP server template
+  - Check version: `git --version`
+  - Install from: [git-scm.com](https://git-scm.com/)
+
+- **Code Editor**: VS Code recommended for TypeScript development
+  - Download from: [code.visualstudio.com](https://code.visualstudio.com/)
+  - Useful extensions: TypeScript, JSON, REST Client
+
+### Environment Setup
+
+1. **API Access**: Ensure you have:
+   - A valid OpenAPI 3.0 specification file
+   - API credentials (API keys, tokens, etc.)
+   - Network access to your API endpoints
+
+2. **File Permissions**: The generator needs:
+   - Read access to your OpenAPI specification file
+   - Write access to create/modify TypeScript files
+   - Execute permissions for running npm commands
+
+### Verification Commands
+
+Run these commands to verify your setup:
+
+```bash
+# Check Python
+python3 --version
+
+# Check Node.js and npm
+node --version
+npm --version
+
+# Check TypeScript
+tsc --version
+
+# Check if you can create MCP servers
+npx @modelcontextprotocol/create-server --help
+```
+
+### Common Installation Issues
+
+- **Python not found**: Make sure Python 3.7+ is in your PATH
+- **Node.js version conflicts**: Use nvm to manage multiple Node.js versions
+- **Permission errors**: On macOS/Linux, you may need `sudo` for global npm installs
+- **TypeScript compilation errors**: Ensure you're using a compatible TypeScript version (4.0+)
+
+## Requirements (Legacy)
 
 - Python 3.7+
 - Node.js and npm
